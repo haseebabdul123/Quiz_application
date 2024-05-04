@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="result.css">
+    <title>Result Page</title>
+</head>
+<body>
+    <div class="result">
+    <h2>Result</h2>
+
+    <div class="rollNum">Roll Number : <span id="rollNum"></span></div><br>
+    <div class="fullName">Name : <span id="fullName"></span></div><br>
+    <div class="batch_no">Batch : <span id="batch_no"></span></div><br>
+    <div class="section_no">Section : <span id="section_no"></span></div><br>
+
+    <br><hr>
+
+    <div class="score"><span  id="score">your Score :  </span></div>
+</div>
+
+<script>
+const rollNum = sessionStorage.getItem("roll_no")
+const fullName = sessionStorage.getItem("name")
+const batchNo = sessionStorage.getItem("batch")
+const section = sessionStorage.getItem("section")
+const score = sessionStorage.getItem("score")
+
+document.getElementById("rollNum").textContent = rollNum
+document.getElementById("fullName").textContent = fullName
+document.getElementById("batch_no").textContent = batchNo
+document.getElementById("section_no").textContent = section
+document.getElementById("score").textContent = score
+</script>
+</body>
+</html>
